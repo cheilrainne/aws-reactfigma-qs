@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "awsreactfigmaqs",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-4b0ff9e5-8d07-4672-9f31-a4fbf120e079/amplify/backend/api/awsreactfigmaqs/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}
