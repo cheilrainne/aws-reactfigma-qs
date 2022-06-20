@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
 
+// Amplify GraphQL API
 import Amplify, { DataStore, Predicates } from "aws-amplify";
 import { Registration } from './models';
 
-//Use next two lines only if syncing with the cloud
+// Amplify UI
+import { ProductCard } from './ui-components';
+
 import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 
@@ -28,8 +31,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
+        {/* <img src={logo} className="App-logo" alt="logo"/> */}
         <div>
+          <ProductCard></ProductCard>
           <input type="button" value="QUERY" onClick={onQuery} />
         </div>
         <p>
