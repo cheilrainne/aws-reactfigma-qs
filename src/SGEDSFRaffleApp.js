@@ -1,22 +1,26 @@
 import React, { useEffect } from "react";
 import logo from './logo.svg';
-import './App.css';
+import './SGEDSFRaffleApp.css';
+
+// Bootstrap UI
+import * as BootstrapUI from 'react-bootstrap';
 
 // Amplify GraphQL API
 import Amplify, { DataStore, Predicates } from "aws-amplify";
 import { Registration } from './models';
 
 // Amplify UI
-import { ProductCard } from './ui-components';
-
+import * as AmplifyUI from './ui-components';
 import awsconfig from "./aws-exports";
+
 Amplify.configure(awsconfig);
 
 
-async function onQuery() {
-  const posts = await DataStore.query(Registration);
-  console.log(posts);
-}
+
+// async function onQuery() {
+//   const posts = await DataStore.query(Registration);
+//   console.log(posts);
+// }
 
 
 function App() {
@@ -30,16 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo"/> */}
-        <div>
-          <ProductCard></ProductCard>
-          <input type="button" value="QUERY" onClick={onQuery} />
-        </div>
-        <p>
-          React Amplified
-        </p>
-      </header>
+      <AmplifyUI.FormRegistrationSimple></AmplifyUI.FormRegistrationSimple>
     </div>
   );
 }

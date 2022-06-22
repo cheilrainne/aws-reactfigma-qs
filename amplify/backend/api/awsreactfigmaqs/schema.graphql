@@ -3,9 +3,5 @@ type Registration @model @auth(rules: [{allow: public}]) {
   fullname: String
   email: AWSEmail
   mobile: AWSPhone
-  invoiceNo: String
-  invoiceAmount: Float
-  receiptImage: String
-  entry: Int
-  entryTotal: Int
-} 
+}
+ 

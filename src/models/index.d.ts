@@ -13,11 +13,6 @@ export declare class Registration {
   readonly fullname?: string | null;
   readonly email?: string | null;
   readonly mobile?: string | null;
-  readonly invoiceNo?: string | null;
-  readonly invoiceAmount?: number | null;
-  readonly receiptImage?: string | null;
-  readonly entry?: number | null;
-  readonly entryTotal?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Registration, RegistrationMetaData>);
