@@ -26,13 +26,14 @@ export default function FormRegistrationSimple(props) {
       mobile: inpMobileValue,
     },
     model: Registration,
-    schema: schema
+    schema: schema,
   });
   return (
     <Flex
       gap="16px"
       direction="column"
       width="640px"
+      alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
