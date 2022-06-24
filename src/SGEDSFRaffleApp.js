@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import styled, { css } from "styled-components";
+
 import './SGEDSFRaffleApp.css';
 
 // // Bootstrap UI
-// import * as BootstrapUI from 'react-bootstrap';
+import * as BootstrapUI from 'react-bootstrap';
 
 // Amplify GraphQL API
 import Amplify, { DataStore, Predicates } from "aws-amplify";
@@ -36,19 +38,57 @@ const formOverrides = {
   }
 };
 
+
+const DarkBackground = styled.div`
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  ${props =>
+    props.disappear &&
+    css`
+      display: block; /* show */
+    `}
+`;
+
+
 class App extends React.Component {
+
   constructor(props) {
-    super(props)
+    super(props);
+
     this.state = {
-      loading: 0
+      loading: 0,
+      registrationDataArr : [],
+      querying: false,
     }
 
-    // this.myFunction = this.myFunction.bind(this);
+    this.onQuery = this.onQuery.bind(this);
+    // this.useState.bind(this);
+
+    // this.useEffect.bind(this);
+    // this.onQuery.bind(this);
+  }
+
+  async onQuery() {
+    await DataStore.query(Registration).finally(() => {
+      this.setState({
+
+      });
+    });
   }
 
   render() {
     return (
       <div className="App">
+        <BootstrapUI.Button disabled={this.state.querying} onClick={async () => {return await onQuery();}}>TEST QUERY</BootstrapUI.Button>
         <AmplifyUI.FormRegistrationSimple overrides={formOverrides}></AmplifyUI.FormRegistrationSimple>
       </div>
     );

@@ -10,6 +10,7 @@ import {AmplifyProvider, ThemeProvider } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import awsconfig from "./aws-exports";
 
+// Source front-end class
 import App from './SGEDSFRaffleApp';
 
 
