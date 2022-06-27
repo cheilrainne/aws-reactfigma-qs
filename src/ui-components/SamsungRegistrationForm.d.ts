@@ -8,9 +8,9 @@ import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { Registration } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type FormRegistrationSimpleProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type SamsungRegistrationFormProps = React.PropsWithChildren<Partial<FlexProps> & {
     formRegistrationSimple?: Registration;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function FormRegistrationSimple(props: FormRegistrationSimpleProps): React.ReactElement;
+export default function SamsungRegistrationForm(props: SamsungRegistrationFormProps): React.ReactElement;

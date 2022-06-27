@@ -11,7 +11,7 @@ import "@aws-amplify/ui-react/styles.css";
 import awsconfig from "./aws-exports";
 
 // Source front-end class
-import App from './SGEDSFRaffleApp';
+import App from './App';
 
 
 Amplify.configure(awsconfig);

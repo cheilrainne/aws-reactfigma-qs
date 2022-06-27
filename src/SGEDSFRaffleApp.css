@@ -1,5 +1,20 @@
+body, html {
+	height: 100%;
+  font-family: SamsungSharpSansregular, sans-serif;
+  line-height: 1.0;
+  overflow-x: hidden!important;
+  background: rgb(23,32,73);
+  background: linear-gradient(180deg, rgba(1,11,23,1) 60%, rgba(49,162,227,1));
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  color: white !important;
+  height: 100%;
+  font-family: SamsungSharpSansregular, sans-serif;
+  line-height: 1.0;
+  overflow-x: hidden!important;
+  background: transparent;
 }
 
 .App-logo {
@@ -28,6 +43,19 @@
   color: #61dafb;
 }
 
+.Header-logo {
+  width: 10vmin;
+  margin: 2vmin;
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form-inputs {
+  color: #fff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +63,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*////////////////////////////////////////////////////////////////// [ FONTS ]*/
+@font-face {
+  font-family: SamsungSharpSansregular;
+  src: url(./assets/fonts/SamsungSharpSans-WebFonts/SamsungSharpSans-Regular.woff);
+  font-weight: 0;
+}
+@font-face {
+  font-family: SamsungSharpSansBold;
+  src: url(./assets/fonts/SamsungSharpSans-WebFonts/SamsungSharpSans-Bold.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: SamsungSharpSansmedium;
+  weight: 400;
+  src: url(./assets/fonts/SamsungSharpSans-WebFonts/SamsungSharpSans-Bold.woff)
+}
+@font-face {
+  font-family: SamsungOneArabic;
+  weight: 0;
+  src: url(./assets/fonts/SamsungSharpSans-WebFonts/SamsungOneArabic-300_v1.1.woff)
 }

@@ -15,7 +15,7 @@ export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
 export { default as NavBar } from "./NavBar";
 export { default as Features2x2 } from "./Features2x2";
-export { default as FormRegistrationSimple } from "./FormRegistrationSimple";
+export { default as SamsungRegistrationForm } from "./SamsungRegistrationForm";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as EditProfile } from "./EditProfile";
 export { default as ActionCard } from "./ActionCard";
